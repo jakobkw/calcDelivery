@@ -1,5 +1,7 @@
 function main(args) {
     
+  const moment = require("moment");
+    
   let date = args.date;
   let partner = args.partner;
 
@@ -9,7 +11,7 @@ function main(args) {
   let tag = date.getDate(); //Sunday = 0, Monday = 1, ... 
    if (partner == "Joice"){
     if (tag == 0) {
-      return {"body": {"delivery": moment(date.subtract(2, 'days')}};
+      return {"body": {"delivery": moment(date).subtract(2, 'days')}};
     }else if(tag == 1) {
       return {"body": {"delivery": moment(date).subtract(3, 'days')}};
     }else {
