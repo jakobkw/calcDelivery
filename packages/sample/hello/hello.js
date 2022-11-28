@@ -7,8 +7,7 @@ function main(args) {
   partner = "Joice";
 
   let tag = date.getDate(); //Sunday = 0, Monday = 1, ... 
-
-  if (partner == "Joice"){
+   if (partner == "Joice"){
     if (tag == 0) {
       return {"body": {"delivery": moment(date.subtract(2, 'days')}};
     }else if(tag == 1) {
